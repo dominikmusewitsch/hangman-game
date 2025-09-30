@@ -3,8 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hangman Game</title>
+    <meta author=" Dominik Musewitsch / Adam Kuzniarski" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Hangman Game</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <nav class="controls">
+        Fails: <span id="wrong-count">0</span>/<span id="max-wrong">10</span>
+        <button id="restart" class="btn">New Game</button>
+
+        <span id="message" role="status" aria-live="polite"></span>
+      </nav>
+      <figure class="gallows">
+        <img id="stage" alt="Hangman Stage" />
+        <figcaption></figcaption>
+      </figure>
+
+      <div class="game-over visibility" id="game-over">Game Over</div>
+      <div id="line"></div>
+
+      <div id="underscore"></div>
+
+      <ul id="abc" class="abc"></ul>
+    </main>
+  </body>
 </html>
